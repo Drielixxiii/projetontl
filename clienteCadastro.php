@@ -150,26 +150,6 @@ include("inc/nav.php");
                                                                 </label>
                                                             </section>
 
-                                                            <!-- <section class="col col-2">
-                                                                <label class="label">Cargo</label>
-                                                                <label class="select">
-                                                                    <select id="cargo" name="cargo">
-                                                                        <option value=""></option>
-                                                                        <?php
-
-                                                                        // $reposit = new reposit();
-                                                                        // $result = $reposit->RunQuery('SELECT codigo, descricao FROM cargo');
-
-                                                                        // while (($row = odbc_fetch_array($result))) {
-                                                                        //     $id = +$row['codigo'];
-                                                                        //     $descricao = utf8_encode($row['descricao']);
-                                                                        //     echo "<option value= \"$id\">$descricao</option>";
-                                                                        // }
-                                                                        ?>
-                                                                    </select><i></i>
-                                                                </label>
-                                                            </section> -->
-
                                                             <section class="col col-2">
                                                                 <label class="label">Estado Civil</label>
                                                                 <label class="select">
@@ -341,42 +321,6 @@ include("inc/nav.php");
                                                                         </select><i></i>
                                                                     </label>
                                                                 </section>
-
-                                                                <!-- <section class="col col-1">
-                                                                    <label class="label">UF</label>
-                                                                    <label class="select"><i class=""></i>
-                                                                        <select id="" name="ufComercial">
-                                                                            <option></option>
-                                                                            <option value="AC">AC</option>
-                                                                            <option value="AL">AL</option>
-                                                                            <option value="AP">AP</option>
-                                                                            <option value="AM">AM</option>
-                                                                            <option value="BA">BA</option>
-                                                                            <option value="CE">CE</option>
-                                                                            <option value="DF">DF</option>
-                                                                            <option value="ES">ES</option>
-                                                                            <option value="GO">GO</option>
-                                                                            <option value="MA">MA</option>
-                                                                            <option value="MT">MT</option>
-                                                                            <option value="MS">MS</option>
-                                                                            <option value="MG">MG</option>
-                                                                            <option value="PA">PA</option>
-                                                                            <option value="PB">PB</option>
-                                                                            <option value="PR">PR</option>
-                                                                            <option value="PE">PE</option>
-                                                                            <option value="PI">PI</option>
-                                                                            <option value="RJ">RJ</option>
-                                                                            <option value="RN">RN</option>
-                                                                            <option value="RS">RS</option>
-                                                                            <option value="RO">RO</option>
-                                                                            <option value="RR">RR</option>
-                                                                            <option value="SC">SC</option>
-                                                                            <option value="SP">SP</option>
-                                                                            <option value="SE">SE</option>
-                                                                            <option value="TO">TO</option>
-                                                                        </select><i></i>
-                                                                    </label>
-                                                                </section> -->
                                                             </div>
                                                         </fieldset>
                                                     </div>
@@ -677,8 +621,6 @@ include("inc/scripts.php");
                 return false;
             }
 
-
-
             let verificarTelefone = false;
 
             if (jsonTelefoneArray.length < 1) {
@@ -696,7 +638,6 @@ include("inc/scripts.php");
                 smartAlert("Erro", "Selecione um telefone principal.", "error");
                 return false;
             }
-
 
             let verificarRedeSocial = false;
 
