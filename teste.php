@@ -15,6 +15,9 @@ $page_nav["controle"]["sub"]["usuarios"]["active"] = true;
 include("inc/nav.php");
 ?>
 
+<header>
+    <meta charset="utf-8" />
+</header>
 <div id="main" role="main">
     <?php
     $breadcrumbs["Controle de Permissão"] = "";
@@ -23,13 +26,15 @@ include("inc/nav.php");
     <div id="content">
         <div id="content">
             <h1 class="text-center">Ponto Diário</h1>
-            <div class="diaHoje  row text-center">
+            <div class="diaHoje row text-center">
                 <section class="col col-2">
                     <h5>
                         <?php
-                        setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+                        header('Content-type: text/html; charset=utf-8');
+
+                        setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
                         date_default_timezone_set('America/Sao_Paulo');
-                        echo utf8_encode(ucwords(strftime('%A, ', $var_DateTime->sec)));
+                        echo utf8_encode(ucwords(strftime('%A, ')));
                         echo strftime('%d de %B de %Y.', strtotime('today'));
                         ?>
                     </h5>
