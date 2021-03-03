@@ -4,15 +4,15 @@ h1 {
 
 .funcionario {
     height: 165px;
-    color: white;
-    background: #3A3633;
+    color: #3A3633;
     border-radius: 5px;
-    align-items: center;
+    text-align: left;
     box-sizing: border-box;
-    /* filter: drop-shadow(5px 5px 5px #acacac); */
+    background: white;
+    /* border: 1px solid black; */
 }
 
-.inicioalmoco, .fimalmoco {
+.inicioalmoco, .fimalmoco, .botaoentrada, .botaosaida {
     border-radius: 5px;
     height: 80px;
     color: white;
@@ -30,20 +30,10 @@ h1 {
 
 .botaoentrada {
     background: #0d9a77;
-    border-radius: 5px;
-    height: 80px;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
 }
 
 .botaosaida {
     background: #CA2121;
-    border-radius: 5px;
-    height: 80px;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
 }
 
 .diaHoje {

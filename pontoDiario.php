@@ -1,4 +1,4 @@
-<!-- http://localhost/cliente/clienteCadastro.php -->
+<!-- http://localhost/Drieli_Cliente/projetontl/pontoDiario.php -->
 
 <?php
 require_once("inc/init.php");
@@ -35,12 +35,12 @@ include("inc/nav.php");
                         setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
                         date_default_timezone_set('America/Sao_Paulo');
                         echo utf8_encode(ucwords(strftime('%A, ')));
-                        echo strftime('%d de %B de %Y.', strtotime('today'));
+                        echo utf8_encode(strftime('%d de %B de %Y.', strtotime('today')));
                         ?>
                     </h5>
                 </section>
                 <section class="col col-2">
-                    <h5>
+                    <h5>Horário de Brasília:
                         <script>
                             var myVar = setInterval(myTimer, 1000);
 
@@ -62,11 +62,6 @@ include("inc/nav.php");
                 </section>
             </div>
             <div class="row primeirasessao">
-                <script>
-                    $(function() {
-                        $('[data-toggle="tooltip"]').tooltip()
-                    })
-                </script>
                 <div class="col-md-8 funcionario card">
                     <h3><i class="fa fa-user-circle"></i> ∙ Funcionario: <span>Fillipy José Pessoa Ferreira Monteiro</span></h3>
                     <h3><i class="fa fa-code"></i> ∙ Projeto: <span>NTL - Nova Tecnologia</span></h3>
@@ -92,7 +87,8 @@ include("inc/nav.php");
                 <div class="col-md-4" style="margin-top:30px">
                     <p><i class="fa fa-address-book"></i> Ocorrências</p>
                     <select class="form-control">
-                        <option>Ocorrencias</option>
+                        <option></option>
+                        <option>Ocorrêcias</option>
                         <option>Home office</option>
                         <option>Atestado médico</option>
                     </select>
@@ -107,6 +103,11 @@ include("inc/nav.php");
                     <input placeholder="Só utilizar em caso de ocorrência." class="datepicker form-control text-center" type="text" data-dateformat="DD, dd 'de' MM 'de' yy.">
                 </div>
 
+                <script>
+                    $(function() {
+                        $('[data-toggle="tooltip"]').tooltip()
+                    })
+                </script>
                 <div class="col-md-4" style="margin-top:30px">
                     <div class="col-md-6">
                         <p><i class="fa fa-clock-o"></i> Atraso:</p>
