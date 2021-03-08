@@ -11,7 +11,7 @@ require_once("inc/config.ui.php");
   YOU CAN SET CONFIGURATION VARIABLES HERE BEFORE IT GOES TO NAV, RIBBON, ETC.
   E.G. $page_title = "Custom Title" */
 
-$page_title = "Ponto Feio";
+$page_title = "Ponto Eletrônico";
 
 /* ---------------- END PHP Custom Scripts ------------- */
 
@@ -75,15 +75,15 @@ include("inc/nav.php");
                                                         <div class="row ">
                                                             <section class=" row text-center" style="margin-bottom: 10px;">
                                                                 <h2 style="font-weight:bold;">Ponto Eletrônico</h2>
-                                                                <h5>
+                                                                <h4>
                                                                     <?php
                                                                     setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese.utf-8');
                                                                     date_default_timezone_set('America/Sao_Paulo');
-                                                                    echo utf8_encode(ucwords(strftime('%A, ', $var_DateTime->sec)));
+                                                                    echo utf8_encode(ucwords(strftime('%A, ')));
                                                                     echo utf8_encode(strftime('%d de %B de %Y.', strtotime('today')));
                                                                     ?>
-                                                                </h5>
-                                                                <h5>Horário de Brasília
+                                                                </h4>
+                                                                <h4>
                                                                     <script>
                                                                         var myVar = setInterval(myTimer, 1000);
 
@@ -101,48 +101,47 @@ include("inc/nav.php");
                                                                         }
                                                                     </script>
                                                                     <div id="hora"></div>
-                                                                </h5>
+                                                                </h4>
+                                                                <div class="text-center" style="margin-top: 30px;">
+                                                                    <h4> Funcionario: <span id="#">O nome do funcionário</span><br>
+                                                                    Expediente: <span id="#">00h às 00h</span></h4>
+                                                                </div>
                                                             </section>
                                                         </div>
 
                                                         <div class="primeirasessao">
-                                                            <div class="col col-md-7 funcionario" style="border: 1px solid #3A3633;">
-                                                                <h3> Matricula: <span id="#">25936</span></h3><br>
-                                                                <h3> Funcionario: <span id="#">O nome do funcionário</span></h3><br>
-                                                                <h3> Projeto: <span id="#">NTL - Nova Tecnologia</span></h3>
-                                                            </div>
-                                                            <div class="col col-md-5">
-                                                                <div class="col col-xs-6 marcacao">
+                                                            <div class="row col col-xs-12">
+                                                                <div class="col col-xs-6 ">
                                                                     <button type="button" class="btn  btn-block botaoentrada">
                                                                         <i class="fa fa-sign-in"></i><br>Entrada </button>
                                                                     <button type="button" class="btn  btn-block botaosaida">
                                                                         <i class="fa fa-sign-out"></i><br>Saida </button>
                                                                 </div>
 
-                                                                <div class="col col-xs-6 marcacao">
+                                                                <div class="col col-xs-6 ">
                                                                     <button type="button" class="btn  btn-block inicioalmoco">
                                                                         <i class="fa fa-cutlery"></i><br> Inicio almoço </button>
                                                                     <button type="button" class="btn  btn-block fimalmoco">
                                                                         <i class="fa fa-cutlery"></i><br> Fim almoço </button>
                                                                 </div>
                                                             </div>
-
                                                         </div>
+
                                                         <div class="">
-                                                            <div class="col col-md-7">
+                                                            <div class="col col-xs-6">
                                                                 <label class="label" for="lancamento">Ocorrência/Lançamento</label>
                                                                 <label class="select">
                                                                     <select id="lancamento" name="lancamento" style="height: 40px;" class="" readonly>
                                                                         <option></option>
                                                                         <?php
-                                                                        $reposit = new reposit();
-                                                                        $sql = "select codigo, descricao from Ntl.lancamento where ativo = 1 order by descricao";
-                                                                        $result = $reposit->RunQuery($sql);
-                                                                        foreach ($result as $row) {
-                                                                            $codigo = (int) $row['codigo'];
-                                                                            $descricao = $row['descricao'];
-                                                                            echo '<option value=' . $codigo . '>' . $descricao . '</option>';
-                                                                        }
+                                                                        // $reposit = new reposit();
+                                                                        // $sql = "select codigo, descricao from Ntl.lancamento where ativo = 1 order by descricao";
+                                                                        // $result = $reposit->RunQuery($sql);
+                                                                        // foreach ($result as $row) {
+                                                                        //     $codigo = (int) $row['codigo'];
+                                                                        //     $descricao = $row['descricao'];
+                                                                        //     echo '<option value=' . $codigo . '>' . $descricao . '</option>';
+                                                                        // }
                                                                         ?>
                                                                     </select><i></i>
                                                                 </label>
@@ -157,15 +156,8 @@ include("inc/nav.php");
                                                                     $('[data-toggle="tooltip"]').tooltip()
                                                                 })
                                                             </script>
-                                                            <!-- <div class="col-md-4">
-                                                                <p>
-                                                                    <i class="fa fa-calendar icon-prepend"></i> 
-                                                                    Calendário <i class="text-muted fa fa-exclamation-circle" data-toggle="popover" title="Atenção!" data-content="O uso do calendário para marcação de dias anteriores, é exclusivo para dias com ocorrências."></i>
-                                                                </p>
-                                                                <input placeholder="Só utilizar em caso de ocorrência." class="datepicker form-control text-center" type="text" data-dateformat="DD, dd 'de' MM 'de' yy.">
-                                                            </div> -->
 
-                                                            <div class="col col-md-5">
+                                                            <div class="col col-xs-6">
                                                                 <div class="col col-md-6">
                                                                     <label id="labelHora" class="label">Atraso: </label>
                                                                     <div class="input-group" data-align="top" data-autoclose="true">
