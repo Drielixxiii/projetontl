@@ -1,3 +1,5 @@
+<!-- http://localhost/Drieli_Cliente/projetontl/pontoAccordion.php -->
+
 <?php
 //initilize the page
 require_once("inc/init.php");
@@ -104,7 +106,7 @@ include("inc/nav.php");
                                                                 </h4>
                                                                 <div class="text-center" style="margin-top: 30px;">
                                                                     <h4> Funcionario: <span id="#">O nome do funcionário</span><br>
-                                                                    Expediente: <span id="#">00h às 00h</span></h4>
+                                                                        Expediente: <span id="#">00h às 00h</span></h4>
                                                                 </div>
                                                             </section>
                                                         </div>
