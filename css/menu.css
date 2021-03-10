@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+h2 {
+    font-weight: bold;
+}
+
+.primeirasessao {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.botao {
+    background-color: #6ed1d4;
+    border-radius: 10px;
+    height: 90px;
+    color: #097275;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Lato';
+    transition: all 0.7s;
+    behavior: smooth;
+}
+
+.botao:hover {
+    letter-spacing: 4px;
+    color: #097275;
+}
+
+.margem {
+    margin-bottom: 5px;
+}
+
+@media(max-width:1000px) {
+    .primeirasessao {
+        display: flex;
+        flex-direction: column;
+    }
+    .botao {
+        height: 90px;
+        width: 90px;
+        margin: 0 auto;
+    }
+}
