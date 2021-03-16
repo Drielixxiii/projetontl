@@ -38,6 +38,8 @@
              specific styles this will also ensure you retrain your customization with each SmartAdmin update. -->
     <link rel="stylesheet" type="text/css" media="screen" href="<?php echo ASSETS_URL; ?>/css/your_style.css">
     <link rel="stylesheet" type="text/css" media="screen" href="<?php echo ASSETS_URL; ?>/css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="<?php echo ASSETS_URL; ?>/css/menu.css">
+
 
     <?php
     if ($page_css) {

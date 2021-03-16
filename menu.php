@@ -48,7 +48,72 @@ include("inc/nav.php");
                 <?php } ?>
             </div> -->
 
-            <div class="">
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+                .inicio {
+                    padding-left: 20px;
+                    margin-bottom: 10px;
+                    color: #353535;
+                }
+
+                h2 {
+                    font-weight: bold;
+                    color: #353535;
+                }
+
+                .fundo {
+                    background-color: aliceblue;
+                }
+
+                .primeirasessao {
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    align-items: center;
+                }
+
+                .botao {
+                    background-color: #6ed1d4;
+                    border-radius: 10px;
+                    height: 90px;
+                    width: 300px;
+                    color: #097275;
+                    font-size: 16px;
+                    font-weight: bold;
+                    font-family: 'Lato';
+                    transition: all 0.7s;
+                    behavior: smooth;
+                }
+
+                .botao:hover {
+                    letter-spacing: 4px;
+                    color: #097275;
+                }
+
+                .margem {
+                    margin-bottom: 5px;
+                }
+
+                .img {
+                    width: 40px;
+                    height: 40px;
+                }
+
+                @media(max-width:1000px) {
+                    .primeirasessao {
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    .botao {
+                        height: 90px;
+                        width: 90px;
+                        margin: 0 auto;
+                    }
+                }
+            </style>
+
+            <div class="fundo">
                 <article class="col-sm-12 col-md-12 col-lg-12 sortable-grid ui-sortable centerBox">
                     <div class="jarviswidget" id="wid-id-1" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-sortable="false">
                         <header>
@@ -75,41 +140,119 @@ include("inc/nav.php");
                                                     <fieldset>
                                                         <input id="codigo" name="codigo" type="text" class="hidden">
                                                         <div class="row ">
-                                                            <section class="text-center" style="margin-bottom: 10px;">
-                                                                <h2>Bem-vind@ !</h2>
+                                                            <section class="text-left inicio" style="padding-left:20px;margin-bottom: 10px; color:#353535;">
+                                                                <h2>Bom dia.</h2>
                                                             </section>
                                                         </div>
 
                                                         <div class="primeirasessao">
-                                                            <div class="row col col-xs-12">
-                                                                <div class="col col-xs-4 margem">
+                                                            <div class="col col-md-12">
+                                                                <div class=" col-xs-4 margem">
+                                                                    <!-- 1 -->
                                                                     <button type="button" class="btn  btn-block botao">
-                                                                        <i class="fa fa-vcard"></i><br>Botão <span></span></button>
+                                                                        <img class="img" src="clock.png">
+                                                                        <br>Ponto Web <span></span>
+                                                                    </button>
+
+                                                                    <!-- 4 -->
                                                                     <button type="button" class="btn  btn-block botao">
-                                                                        <i class="fa fa-vcard"></i><br>Botão <span></span></button>
+                                                                        <img class="img" src="benefits.png">
+                                                                        <br>Benefícios <span></span>
+                                                                    </button>
+
+                                                                    <!-- 7 -->
                                                                     <button type="button" class="btn  btn-block botao">
-                                                                        <i class="fa fa-vcard"></i><br>Botão <span></span></button>
+                                                                        <img class="img" src="chart.png">
+                                                                        <br>Relatório / Estatísticas <span></span>
+                                                                    </button>
                                                                 </div>
 
-                                                                <div class="col col-xs-4 margem">
+                                                                <div class=" col-xs-4 margem">
+
+                                                                    <!-- 2 -->
                                                                     <button type="button" class="btn  btn-block botao">
-                                                                        <i class="fa fa-vcard"></i><br>Botão <span></span></button>
+                                                                        <img class="img" src="page.png">
+                                                                        <br>Folha Mensal<span></span>
+                                                                    </button>
+
+                                                                    <!-- 5 -->
                                                                     <button type="button" class="btn  btn-block botao">
-                                                                        <i class="fa fa-vcard"></i><br>Botão <span></span></button>
+                                                                        <img class="img" src="delivery.png">
+                                                                        <br>Vale Transporte<span></span>
+                                                                    </button>
+
+                                                                    <!-- 8 -->
                                                                     <button type="button" class="btn  btn-block botao">
-                                                                        <i class="fa fa-vcard"></i><br>Botão <span></span></button>
+                                                                        <i class="fa fa-vcard"></i>
+                                                                        <br>botao <span></span></button>
                                                                 </div>
 
-                                                                <div class="col col-xs-4 margem">
+                                                                <div class=" col-xs-4 margem">
+                                                                    <!-- 3 -->
                                                                     <button type="button" class="btn  btn-block botao">
-                                                                        <i class="fa fa-vcard"></i><br>Botão <span></span></button>
+                                                                        <img class="img" src="email.png">
+                                                                        <br>Contra Cheque Web<span></span></button>
+
+                                                                    <!-- 6 -->
                                                                     <button type="button" class="btn  btn-block botao">
-                                                                        <i class="fa fa-vcard"></i><br>Botão <span></span></button>
-                                                                    <!-- <button type="button" class="btn  btn-block botao">
-                                                                        <i class="fa fa-vcard"></i><br>Botão <span></span></button> -->
+                                                                        <img class="img" src="eating.png">
+                                                                        <br>Vale Alimentação / Refeição <span></span></button>
+
+                                                                    <!-- 9 -->
+                                                                    <button type="button" class="btn  btn-block botao">
+                                                                        <i class="fa fa-vcard"></i><br>botao <span></span></button>
                                                                 </div>
                                                             </div>
                                                         </div>
+
+
+
+                                                        <!-- <div class="col col-md-12 text-center">
+                                                            <div class="col col-xs-12">
+                                                                <div class=" col-xs-4 margem">
+                                                                    <button type="button" class="btn  btn-lg botao btn-block ">
+                                                                        <i class="fa fa-vcard"></i><br>Botão <span></span></button>
+                                                                </div>
+                                                                <div class=" col-xs-4 margem">
+                                                                    <button type="button" class="btn  btn-lg botao btn-block ">
+                                                                        <i class="fa fa-vcard"></i><br>Botão <span></span></button>
+                                                                </div>
+                                                                <div class=" col-xs-4 margem">
+                                                                    <button type="button" class="btn  btn-lg botao btn-block ">
+                                                                        <i class="fa fa-vcard"></i><br>Botão <span></span></button>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col col-xs-12">
+                                                                <div class=" col-xs-4 margem">
+                                                                    <button type="button" class="btn  btn-lg botao btn-block ">
+                                                                        <i class="fa fa-vcard"></i><br>Botão <span></span></button>
+                                                                </div>
+                                                                <div class=" col-xs-4 margem">
+                                                                    <button type="button" class="btn  btn-lg botao btn-block">
+                                                                        <i class="fa fa-vcard"></i><br>Botão <span></span></button>
+                                                                </div>
+                                                                <div class=" col-xs-4 margem">
+                                                                    <button type="button" class="btn  btn-lg botao btn-block">
+                                                                        <i class="fa fa-vcard"></i><br>Botão <span></span></button>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col col-xs-12">
+                                                                <div class=" col-xs-4 margem">
+                                                                    <button type="button" class="btn btn-lg botao btn-block">
+                                                                        <i class="fa fa-vcard"></i><br>Botão <span></span></button>
+                                                                </div>
+                                                                <div class=" col-xs-4 margem">
+                                                                    <button type="button" class="btn  btn-lg botao btn-block">
+                                                                        <i class="fa fa-vcard"></i><br>Botão <span></span></button>
+                                                                </div>
+                                                                <div class=" col-xs-4 margem">
+                                                                    <button type="button" class="btn  btn-lg botao btn-block">
+                                                                        <i class="fa fa-vcard"></i><br>Botão <span></span></button>
+                                                                </div>
+                                                            </div>
+                                                        </div> -->
                                                     </fieldset>
                                                 </div>
                                             </div>
@@ -123,7 +266,6 @@ include("inc/nav.php");
             </div>
         </section>
     </div>
-
 
     <!-- ==========================CONTENT ENDS HERE ========================== -->
 
