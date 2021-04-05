@@ -1,4 +1,4 @@
-<!-- http://localhost/cliente/clienteCadastro.php -->
+<!-- http://localhost/Drieli_Cliente/projetontl/clienteCadastro.php -->
 
 <?php
 //initilize the page
